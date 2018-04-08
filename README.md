@@ -16,7 +16,7 @@
 <img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/2-1-kolonki-odinakovoy-shiriny.jpg"/>
 <h3>2.2 Установка ширины одной колонки</h3>
 <p>Вы также можете явно установить ширину одной колонки, а остальные оставить автоматическими.</p>
-```bash
+```html
 <div class="row">
     <div class="col">1 из 3</div>
     <div class="col-6">2 из 3 (широкое)</div>
