@@ -18,9 +18,14 @@
 <p>Вы также можете явно установить ширину одной колонки, а остальные оставить автоматическими.</p>
 
 ```html
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Эти 3 тега *должны* быть указаны в начале тега `<head>` -->
-<title>Заговоловок страницы</title>
+<div class="row">
+    <div class="col">1 из 3</div>
+    <div class="col-6">2 из 3 (широкое)</div>
+    <div class="col">3 из 3</div>
+</div>
+<div class="row">
+    <div class="col">1 из 3</div>
+    <div class="col-5">2 из 3 (широкое)</div>
+    <div class="col">3 из 3</div>
+</div>
 ```
