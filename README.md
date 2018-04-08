@@ -131,3 +131,176 @@
 ```
 
 <img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/3-3-sozdaniye-slozhnoy-setki-na-bootstrap.jpg"/>
+
+<h2>4. Выравнивание</h2>
+<p>Bootstrap 4 основан на «флексах» и дарит нам все возможности данной модели, которые доступны в простых готовых классах. В числе возможностей - вертикальное и горизонтальное выравнивание.</p>
+
+<h3>4.1 Вертикальное выравнивание</h3>
+
+```html
+<div class="row align-items-start">
+    <div class="col">Верх</div>
+    <div class="col">Верх</div>
+    <div class="col">Верх</div>
+</div>
+<div class="row align-items-center">
+    <div class="col">Середина</div>
+    <div class="col">Середина</div>
+    <div class="col">Середина</div>
+</div>
+<div class="row align-items-end">
+    <div class="col">Низ</div>
+    <div class="col">Низ</div>
+    <div class="col">Низ</div>
+</div>
+```
+
+<img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/4-1-0-bootstrap-4-vertikalnoye-vyravnivaniye.jpg"/>
+
+<p>Помимо управления выравниванием через родительский «.row», можно выравнивать колонки, задавая им соответствующие классы:</p>
+
+```html
+<div class="row">
+    <div class="col align-self-start">Верх</div>
+    <div class="col align-self-center">Середина</div>
+    <div class="col align-self-end">Низ</div>
+</div>
+```
+
+<img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/4-1-1-bootstrap-4-vertikalnoye-vyravnivaniye-2.jpg"/>
+
+<h3>4.2 Горизонтальное выравнивание</h3>
+<p>Кроме того, Bootstrap 4 имеет в своём арсенале инструменты для горизонтального выравнивания колонок при помощи префикса «.justify-content-» у «.row».</p>
+
+```html
+<div class="row justify-content-start">
+    <div class="col-4">row justify-content-start</div>
+    <div class="col-4">row justify-content-start</div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-4">row justify-content-center</div>
+    <div class="col-4">row justify-content-center</div>
+</div>
+<div class="row justify-content-end">
+    <div class="col-4">justify-content-end</div>
+    <div class="col-4">justify-content-end</div>
+</div>
+<div class="row justify-content-around">
+    <div class="col-4">justify-content-around</div>
+    <div class="col-4">justify-content-around</div>
+</div>
+<div class="row justify-content-between">
+    <div class="col-4">justify-content-between</div>
+    <div class="col-4">justify-content-between</div>
+</div>
+```
+
+<img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/4-2-bootstrap-4-gorizontalnoye-viravnivaniye.jpg"/>
+
+<h3>4.3 Удаление полей между колонками</h3>
+<p>Очень часто встречаются ситуации, когда необходимо убрать поля между колонками. Например, если вы создаете галерею и элементы должны быть расположены вплотную, например так:</p>
+
+<img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/4-3-0-primer-no-gutters.jpg"/>
+
+<p>Для этого достаточно у элемента «.row» задать дополнительный класс «.no-gutters».</p>
+
+```html
+<div class="row no-gutters">
+    <div class="col-6 col-sm-4 col-md-4"><div>col-6 col-sm-4 col-md-4</div></div>
+    <div class="col-6 col-sm-4 col-md-4"><div>col-6 col-sm-4 col-md-4</div></div>
+    <div class="col-6 col-sm-4 col-md-4"><div>col-6 col-sm-4 col-md-4</div></div>
+    <div class="col-6 col-sm-4 col-md-4"><div>col-6 col-sm-4 col-md-4</div></div>
+    <div class="col-6 col-sm-4 col-md-4"><div>col-6 col-sm-4 col-md-4</div></div>
+    <div class="col-6 col-sm-4 col-md-4"><div>col-6 col-sm-4 col-md-4</div></div>
+    <div class="col-6 col-sm-4 col-md-4"><div>col-6 col-sm-4 col-md-4</div></div>
+    <div class="col-6 col-sm-4 col-md-4"><div>col-6 col-sm-4 col-md-4</div></div>
+    <div class="col-6 col-sm-4 col-md-4"><div>col-6 col-sm-4 col-md-4</div></div>
+</div>
+```
+
+<img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/4-3-1-udaleniye-poley-mezhdu-kolonkami.jpg"/>
+
+<h3>4.4 Перенос колонок на новую строку</h3>
+<p>Если ряд (.row) заполняется суммарным количеством колонок более 12-ти, последующая колонка переносится на новую строку.</p>
+
+```html
+<div class="row">
+    <div class="col-9">.col-9</div>
+    <div class="col-4">.col-4<br>9 + 4 = 13 колонок - это больше 12. Данный элемент шириной в 4 колонки будет перенесён на новую строку.</div>
+    <div class="col-6">.col-6<br>Следующие колонки расположатся вдоль строки.</div>
+</div>
+```
+
+<img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/4-4-perenos-kolonok.jpg"/>
+
+```bash
+Здесь всё также, как в 3-й версии Bootstrap.
+```
+
+<h2>5. Порядок элементов</h2>
+<h3>5.1 Классы порядка элементов</h3>
+<p>Можно использовать специальные классы с префиксом «.order-» для определения порядка элементов. Если вы знакомы с Flex-вёрсткой, данные правила будут вам знакомы. Bootstrap 4 даёт возможность задавать порядок элементов с помощью классов. Можно задавать порядок напрямую (.order-1.order-md-2):</p>
+
+```html
+<div class="row">
+    <div class="col">Первый неупорядоченный элемент</div>
+    <div class="col order-12">Второй, упорядоченный как последний</div>
+    <div class="col order-1">Третий, упорядоченный как первый</div>
+</div>
+```
+
+<img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/5-1-0-reordering.jpg"/>
+
+<p>Или можно использовать специальные классы, которые определяют порядок первого и последнего элементов (.order-first, .order-last):</p>
+
+```html
+<div class="row">
+    <div class="col">Первый неупорядоченный</div>
+    <div class="col order-last">Второй, упорядоченный как последний</div>
+    <div class="col order-first">Третий, упорядоченный как первый</div>
+</div>
+```
+
+<img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/5-1-1-reordering-2.jpg"/>
+
+<h3>5.2 Смещение колонок</h3>
+<p>По аналогии с Bootstrap 3, в 4-й версии также есть возможность горизонтального смещения колонок, однако реализовано это несколько иначе и для этого есть специальные классы с префиксом «.offset-».</p>
+<h4>5.2.1 Классы смещения</h4>
+<p>Сдвигать колонку вправо можно, используя классы «.offset-md-*», которые увеличивают левый отступ на * количество элементов. Из примера ниже, класс «.offset-md-2» сдвинет колонку «.col-md-4» на 2 колонки вправо, остальные примеры работают по аналогии:</p>
+
+```html
+<div class="row">
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+</div>
+<div class="row">
+    <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+    <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+</div>
+<div class="row">
+    <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+</div>
+```
+
+<img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/5-2-1-offset.jpg"/>
+
+```bash
+Можно сбрасывать отступ на всех разрешениях благодаря классу «.offset-*-0», 
+где * - это sm, md, lg или xl.
+```
+
+<h2>6. Вложенность</h2>
+<p>Весьма ожидаемо, что Bootstrap 4 поддерживает вложенность элементов. Работает здесь всё также, как в третьей версии - чтобы вложить колонки в другие, необходимо создать дочерний класс «.row» и уже в него вкладывать колонки.</p>
+
+```html
+<div class="row">
+    <div class="col-sm-9">Уровень 1: «.col-sm-9»
+        <div class="row">
+            <div class="col-8 col-sm-6">Уровень 2: «.col-8 .col-sm-6»</div>
+            <div class="col-4 col-sm-6">Уровень 2: «.col-4 .col-sm-6»</div>
+        </div>
+    </div>
+</div>
+```
+
+<img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/6-vlozhennost.jpg"/>
