@@ -1,8 +1,4 @@
 # Bootstrap 4. Сетка. Подробное руководство
-<h2></h2>
-<h3></h3>
-<p></p>
-<img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/1-1-grid-options.jpg"/>
 <h2>1. Основные параметры сетки по-умолчанию</h2>
 <p>По-умолчанию сетка Bootstrap 4 очень похожа на сетку третьей версии, однако появились некоторые важные отличия.</p>
 <img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/1-1-grid-options.jpg"/>
@@ -28,4 +24,39 @@
     <div class="col-5">2 из 3 (широкое)</div>
     <div class="col">3 из 3</div>
 </div>
+```
+<img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/1-1-grid-options.jpg"/>
+<p>В данном примере второй элемент в третьем ряду имеет класс «.col-6» и второй элемент во втором ряду имеет класс «.col-5», которые занимают соответствующее количество колонок на всех разрешениях экрана. Ширина остальных колонок является отзывчивой и вычисляется автоматически, занимая всё оставшееся пространство.</p>
+<h3>2.3 Контент переменной ширины</h3>
+<p>Можно использовать класс «col-{breakpoint}-auto», чтобы определить контент с переменной шириной, в зависимости от занимаемого пространства содержимым колонки. Где breakpoint - размер экрана (xl, lg, md или sm).</p>
+```html
+<div class="row justify-content-sm-center">
+    <div class="col col-md-2">1 из 3</div>
+    <div class="col-sm-auto">Контент переменной ширины</div>
+    <div class="col col-md-2">3 из 3</div>
+</div>
+<div class="row">
+    <div class="col">1 из 3</div>
+    <div class="col-sm-auto">Контент переменной ширины номер два</div>
+    <div class="col col-md-2">3 из 3</div>
+</div>
+```
+<img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/2-3-kontent-peremennoy-shiriny.jpg"/>
+<p>
+Здесь мы видим, что две центральные колонки занимают ширину, соответствующую ширине содержимого, однако в первом ряду благодаря классу «.justify-content-sm-center» у «.row» весь ряд центрируется и общая ширина зависит только от ширины центральной колонки, в то время, как второй ряд растягивается на всю доступную ширину, но вторая колонка остается фиксированной по ширине содержимого.</p>
+<h3>2.4 Мульти-ряд</h3>
+<p>Благодаря Bootstrap 4 вы можете сделать в одном ряду несколько строк (переносов). Реализовать это можно с помощью класса «.w-100», который очень похож на тег «br» и по-сути просто делает перенос колонок на новую строку.</p>
+```html
+<div class="row">
+    <div class="col">col</div>
+    <div class="col">col</div>
+    <div class="w-100"></div>
+    <div class="col">col</div>
+    <div class="col">col</div>
+    <div class="col">col</div>
+</div>
+```
+<img src="https://webdesign-master.ru/img/blog/html-css/bootstrap-4/2-4-multi-ryad.jpg"/>
+```bash
+Обратите внимание, что данный класс является частью дополнительных возможностей Bootstrap 4, которые подключаются к проекту отдельно в случае использования Sass версии проекта Bootstrap и находятся в папке «scss/utilities». Вы также можете подключить другие плагины из этой папки к вашему проекту по необходимости.
 ```
